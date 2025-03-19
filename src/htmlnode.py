@@ -9,6 +9,8 @@ class HTMLNODE:
         raise NotImplementedError("This method should be overriden by the subclass")
     
     def props_to_html(self):
+        if not self.props:
+            return ''
         for k,v in self.props.items():
             return f'{k}="{v}" '
     
