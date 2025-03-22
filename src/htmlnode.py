@@ -12,7 +12,7 @@ class HTMLNODE:
         if not self.props:
             return ''
         for k,v in self.props.items():
-            return f'{k}="{v}" '
+            return f' {k}="{v}" '
     
     def __repr__(self):
         return f"HTMLNode({self.tag}, {self.value}, {self.children}, {self.props})"
