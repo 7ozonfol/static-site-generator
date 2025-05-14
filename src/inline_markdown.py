@@ -91,7 +91,7 @@ def extract_markdown_links(text):
 
 
 def text_to_textnodes(text):
-    nodes = [TextNode(text, TextType.TEXT)]
+    nodes = [TextNode(text, TextType.NORMAL)]
     nodes = split_nodes_delimiter(nodes, "**", TextType.BOLD)
     nodes = split_nodes_delimiter(nodes, "_", TextType.ITALIC)
     nodes = split_nodes_delimiter(nodes, "`", TextType.CODE)

@@ -163,15 +163,15 @@ class TestInlineMarkdown(unittest.TestCase):
             nodes = text_to_textnodes(text)
             self.assertListEqual(
                 [
-                TextNode("This is ", TextType.TEXT),
+                TextNode("This is ", TextType.NORMAL),
                 TextNode("text", TextType.BOLD),
-                TextNode(" with an ", TextType.TEXT),
+                TextNode(" with an ", TextType.NORMAL),
                 TextNode("italic", TextType.ITALIC),
-                TextNode(" word and a ", TextType.TEXT),
+                TextNode(" word and a ", TextType.NORMAL),
                 TextNode("code block", TextType.CODE),
-                TextNode(" and an ", TextType.TEXT),
+                TextNode(" and an ", TextType.NORMAL),
                 TextNode("obi wan image", TextType.IMAGE, "https://i.imgur.com/fJRm4Vk.jpeg"),
-                TextNode(" and a ", TextType.TEXT),
+                TextNode(" and a ", TextType.NORMAL),
                 TextNode("link", TextType.LINK, "https://boot.dev"),
                 ],
                 nodes,
